@@ -115,13 +115,17 @@ import "bootstrap/dist/css/bootstrap.css"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Homepage from "./pages/HomePage/Homepage"
 import Products from "./pages/Products/Products"
+import Navbar from "./components/Navbar/Navbar"
 
 export default function App() {
-  return <BrowserRouter>
+  return <>
+  <Navbar/>
+  <BrowserRouter>
     <Routes>
       <Route path="/" element={<Homepage/>}></Route>
       <Route path="/products" element={<Products/>}></Route>
       <Route path="*" element={<div>Not Found</div>}></Route>
     </Routes>
   </BrowserRouter>
+  </>
 }
